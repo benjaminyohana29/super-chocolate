@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Chocolate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #6f4e37;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5b3e30;
+        }
+        .chocolate-images {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .chocolate-images img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Order Your Chocolate</h1>
+    <form>
+        <label for="chocolate-type">Choose chocolate type:</label>
+        <select id="chocolate-type">
+            <option value="dark">Dark Chocolate</option>
+            <option value="milk">Milk Chocolate</option>
+            <option value="white">White Chocolate</option>
+        </select>
+
+        <div class="chocolate-images">
+            <img src="dark.png" alt="Dark Chocolate" onclick="document.getElementById('chocolate-type').value='dark'">
+            <img src="milk.png" alt="Milk Chocolate" onclick="document.getElementById('chocolate-type').value='milk'">
+            <img src="white.png" alt="White Chocolate" onclick="document.getElementById('chocolate-type').value='white'">
+        </div>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+
+        <button type="submit">Order Now</button>
+    </form>
+
+</body>
+</html>
